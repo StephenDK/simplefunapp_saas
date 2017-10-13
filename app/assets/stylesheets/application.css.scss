@@ -20,6 +20,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+/*This css under this comment is a user alert when any other number
+is entered in the quary string parameters besides the plan 1 and 2
+*/
 .alert-notice {
   color: #8a6d3b;
   background-color: #fcf8e3;
