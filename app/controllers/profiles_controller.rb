@@ -13,7 +13,13 @@ def create
     else
       render action: :new
     end
+end
+  
+  def edit
+    @user = User.find( params[:user_id] )
+    @profile = @user.profile
   end
+  
   private
     def profile_params
       params.require(:profile).permit(:first_name, :gamer_tag, :system, :phone_number, :contact_email, :description)
