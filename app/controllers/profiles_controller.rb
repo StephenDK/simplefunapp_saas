@@ -36,7 +36,7 @@ end
   
   private
     def profile_params
-      params.require(:profile).permit(:first_name, :gamer_tag, :system, :phone_number, :contact_email, :description)
+      params.require(:profile).permit(:first_name, :gamer_tag, :avatar, :system, :phone_number, :contact_email, :description)
     end
     def only_current_user
       @user = User.find( params[:user_id] )
