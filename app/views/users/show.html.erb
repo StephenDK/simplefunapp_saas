@@ -1,8 +1,30 @@
-<%= image_tag @user.profile.avatar.url %>
-<%= @user.profile.first_name %> <%= @user.profile.gamer_tag %>
-<%= @user.profile.system %><br/>
-<% if current_user.plan_id == 2 %>
-  <%= @user.profile.phone_number %><br/>
-  <%= @user.profile.contact_email %><br/>
-<% end %>
-<%= @user.profile.description %><br/>
+<div class="row">
+  <div class="col-md-3">
+    <%= image_tag @user.profile.avatar.url %>
+  </div>
+
+  <div class="col-md-9">
+      <h3 class="resize"><strong>Name:</strong></h3>
+  <h2 class="userName"><%= @user.profile.first_name %></h2>
+  </br>
+  <div class="well">
+    <h4><strong>Gamertag:</strong></h4>
+    <%= @user.profile.gamer_tag %>
+  </div>
+  <h3><strong>Favorite system:</strong></h3>
+  <h4><span class="system_icon"><%= system_icon %></span> <%= @user.profile.system %><br/></h4>
+  </br>
+  <% if current_user.plan_id == 2 %>
+  <div class="well">
+    <strong>Phone:</strong>
+    <%= @user.profile.phone_number %><br/>
+      <strong>Email:</strong>
+      <%= @user.profile.contact_email %><br/>
+  </div>
+  <% end %>
+  <div class="well">
+    <strong>Description:</strong>
+    <%= @user.profile.description %><br/>
+    </div>
+  </div>
+</div>
